@@ -10,109 +10,109 @@
 
 <h2>Тест случаи според критериумот Every statement</h2>
 
-Случај 1: allitems e null
-  Покрива: Exception за null листа
-  Влез: allItems = null, cardNumber = "1234567890123456"
-  Очекуван резултат: RuntimeException("allItems list can't be null!")
+Случај 1: allitems e null</br>
+  Покрива: Exception за null листа</br>
+  Влез: allItems = null, cardNumber = "1234567890123456"</br>
+  Очекуван резултат: RuntimeException("allItems list can't be null!")</br>
 
-Случај 2: Празна листа со валидна картичка
-  Покрива: иницијализација на сума, проверка на картичка, дефинирање дозволени карактери, конвертирање во низа, for циклус за карактери, земање на карактер, проверка на карактер, враќање на сума
-  Влез: allItems = [], cardNumber = "1234567890123456"
-  Очекуван резултат: return 0.0
+Случај 2: Празна листа со валидна картичка</br>
+  Покрива: иницијализација на сума, проверка на картичка, дефинирање дозволени карактери, конвертирање во низа, for циклус за карактери, земање на карактер, проверка на карактер, враќање на сума</br>
+  Влез: allItems = [], cardNumber = "1234567890123456"</br>
+  Очекуван резултат: return 0.0</br>
 
-Случај 3: Предмет со null име
-  Покрива: Exception за невалиден предмет
-  Влез: allItems = [Item(null, 1, 100, 0.0)], 
-        cardNumber = "1234567890123456"
-  Очекуван резултат: RuntimeException("Invalid item!")
+Случај 3: Предмет со null име</br>
+  Покрива: Exception за невалиден предмет<br>
+  Влез: allItems = [Item(null, 1, 100, 0.0)], <br>
+        cardNumber = "1234567890123456"<br>
+  Очекуван резултат: RuntimeException("Invalid item!")<br>
 
-Случај 4: Предмет со празно име
-  Покрива: Exception за null листа(алтернативен начин)
-  Влез: allItems = [Item("", 1, 100, 0.0)], 
-        cardNumber = "1234567890123456"
-  Очекуван резултат: RuntimeException("Invalid item!")
+Случај 4: Предмет со празно име</br>
+  Покрива: Exception за null листа(алтернативен начин)<br>
+  Влез: allItems = [Item("", 1, 100, 0.0)], <br>
+        cardNumber = "1234567890123456"<br>
+  Очекуван резултат: RuntimeException("Invalid item!")<br>
 
-Случај 5: Предмет кој активира попуст од 30 и има попуст
-  Покрива: одземање на 30, пресметка со попуст
-  Влез: allItems = [Item("Test", 15, 400, 0.1)], 
-        cardNumber = "1234567890123456"
-  Очекуван резултат: return 15 * 400 * 0.9 - 30 = 5370.0
+Случај 5: Предмет кој активира попуст од 30 и има попуст<br>
+  Покрива: одземање на 30, пресметка со попуст<br>
+  Влез: allItems = [Item("Test", 15, 400, 0.1)], <br>
+        cardNumber = "1234567890123456"<br>
+  Очекуван резултат: return 15 * 400 * 0.9 - 30 = 5370.0<br>
 
-Случај 6: Предмет кој не активира попуст од 30 и има попуст
-  Покрива: пресметка без попуст
-  Влез: allItems = [Item("Test", 5, 200, 0.0)], 
-        cardNumber = "1234567890123456"
-  Очекуван резултат: return 5 * 200 = 1000.0
+Случај 6: Предмет кој не активира попуст од 30 и има попуст<br>
+  Покрива: пресметка без попуст<br>
+  Влез: allItems = [Item("Test", 5, 200, 0.0)], <br>
+        cardNumber = "1234567890123456"<br>
+  Очекуван резултат: return 5 * 200 = 1000.0<br>
 
-Случај 7: Невалидна картичка (null)
-  Покрива: Exception за невалидна картичка
-  Влез: allItems = [Item("Test", 1, 100, 0.0)], 
-        cardNumber = null
-  Очекуван резултат: RuntimeException("Invalid card number!")
+Случај 7: Невалидна картичка (null)<br>
+  Покрива: Exception за невалидна картичка<br>
+  Влез: allItems = [Item("Test", 1, 100, 0.0)], <br>
+        cardNumber = null<br>
+  Очекуван резултат: RuntimeException("Invalid card number!")<br>
 
-Случај 8: Невалидна картичка (погрешна должина)
-  Покрива: Exception за невалидна картичка(алтернативен начин)
-  Влез: allItems = [Item("Test", 1, 100, 0.0)], 
-        cardNumber = "12345"
-  Очекуван резултат: RuntimeException("Invalid card number!")
+Случај 8: Невалидна картичка (погрешна должина)<br>
+  Покрива: Exception за невалидна картичка(алтернативен начин)<br>
+  Влез: allItems = [Item("Test", 1, 100, 0.0)], <br>
+        cardNumber = "12345"<br>
+  Очекуван резултат: RuntimeException("Invalid card number!")<br>
 
-Случај 9: Картичка со невалиден карактер
-  Покрива: Exception за невалиден карактер
-  Влез: allItems = [Item("Test", 1, 100, 0.0)], 
-        cardNumber = "123456789012345a"
-  Очекуван резултат: RuntimeException("Invalid character in card number!")
+Случај 9: Картичка со невалиден карактер<br>
+  Покрива: Exception за невалиден карактер<br>
+  Влез: allItems = [Item("Test", 1, 100, 0.0)], <br>
+        cardNumber = "123456789012345a"<br>
+  Очекуван резултат: RuntimeException("Invalid character in card number!")<br>
 
-Потребни се 9 тест случаи за да се постигне Every Statement критериумот, односно да се покријат сите "statements".
+Потребни се 9 тест случаи за да се постигне Every Statement критериумот, односно да се покријат сите "statements".<br>
 
 <h2>Тест случаи според критериумот Multiple Conditions</h2>
 
-Случај 1: FFF(false,false,false)
-  Услов: price <= 300, discount <= 0, quantity <= 10
-  Влез: allItems = [Item("Test", 5, 200, 0.0)], 
-        cardNumber = "1234567890123456"
-  Очекуван резултат: не се одзема 30, sum = 5 * 200 = 1000.0
+Случај 1: FFF(false,false,false)<br>
+  Услов: price <= 300, discount <= 0, quantity <= 10<br>
+  Влез: allItems = [Item("Test", 5, 200, 0.0)], <br>
+        cardNumber = "1234567890123456"<br>
+  Очекуван резултат: не се одзема 30, sum = 5 * 200 = 1000.0<br>
 
-Случај 2: FFT(false,false,true)
-  Услов: price <= 300, discount <= 0, quantity > 10
-  Влез: allItems = [Item("Test", 5, 200, 0.0)], 
-        cardNumber = "1234567890123456"
-  Очекуван резултат: се одзема 30, sum = 15 * 200 - 30 = 2970.0
+Случај 2: FFT(false,false,true)<br>
+  Услов: price <= 300, discount <= 0, quantity > 10<br>
+  Влез: allItems = [Item("Test", 5, 200, 0.0)], <br>
+        cardNumber = "1234567890123456"<br>
+  Очекуван резултат: се одзема 30, sum = 15 * 200 - 30 = 2970.0<br>
 
-Случај 3: FTF
-  Услов: price <= 300, discount > 0, quantity <= 10
-  Влез: allItems = allItems = [Item("Test", 5, 200, 0.1)], 
-        cardNumber = "1234567890123456"
-  Очекуван резултат: Се одзема 30, sum = 5 * 200 * 0.9 - 30 = 870.0
+Случај 3: FTF<br>
+  Услов: price <= 300, discount > 0, quantity <= 10<br>
+  Влез: allItems = allItems = [Item("Test", 5, 200, 0.1)], <br>
+        cardNumber = "1234567890123456"<br>
+  Очекуван резултат: Се одзема 30, sum = 5 * 200 * 0.9 - 30 = 870.0<br>
 
-Случај 4: FTT
-  Услов: price <= 300, discount > 0, quantity > 0 
-  Влез: allItems = allItems = [Item("Test", 5, 200, 0.1)], 
-        cardNumber = "1234567890123456"
-  Очекуван резултат: Се одзема 30, sum = 15 * 200 * 0.9 - 30 = 2670.0
+Случај 4: FTT<br>
+  Услов: price <= 300, discount > 0, quantity > 0 <br>
+  Влез: allItems = allItems = [Item("Test", 5, 200, 0.1)], <br>
+        cardNumber = "1234567890123456"<br>
+  Очекуван резултат: Се одзема 30, sum = 15 * 200 * 0.9 - 30 = 2670.0<br>
 
-Случај 5: TFF
-  Услов: price > 300, discount ≤ 0, quantity ≤ 10
-  Влез: allItems = [Item("Test", 5, 400, 0.0)], 
-        cardNumber = "1234567890123456"
-  Очекуван резултат: Се одзема 30, sum = 5 * 400 - 30 = 1970.0
+Случај 5: TFF<br>
+  Услов: price > 300, discount ≤ 0, quantity ≤ 10<br>
+  Влез: allItems = [Item("Test", 5, 400, 0.0)], <br>
+        cardNumber = "1234567890123456"<br>
+  Очекуван резултат: Се одзема 30, sum = 5 * 400 - 30 = 1970.0<br>
 
-Случај 6: TFT
-  Услов:  price > 300, discount ≤ 0, quantity > 10
-  Влез: allItems = [Item("Test", 15, 400, 0.0)], 
-        cardNumber = "1234567890123456"
-  Очекуван резултат:  Се одзема 30, sum = 15 * 400 - 30 = 5970.0
+Случај 6: TFT<br>
+  Услов:  price > 300, discount ≤ 0, quantity > 10<br>
+  Влез: allItems = [Item("Test", 15, 400, 0.0)], <br>
+        cardNumber = "1234567890123456"<br>
+  Очекуван резултат:  Се одзема 30, sum = 15 * 400 - 30 = 5970.0<br>
 
-Случај 7: TTF
-  Услов: price > 300, discount > 0, quantity ≤ 10
-  Влез: allItems = [Item("Test", 5, 400, 0.1)], 
-        cardNumber = "1234567890123456"
-  Очекуван резултат: Се одзема 30, sum = 5 * 400 * 0.9 - 30 = 1770.0
+Случај 7: TTF<br>
+  Услов: price > 300, discount > 0, quantity ≤ 10<br>
+  Влез: allItems = [Item("Test", 5, 400, 0.1)], <br>
+        cardNumber = "1234567890123456"<br>
+  Очекуван резултат: Се одзема 30, sum = 5 * 400 * 0.9 - 30 = 1770.0<br>
 
-Случај 8: TTT
-  Услов: price > 300, discount > 0, quantity > 10
-  Влез: allItems = [Item("Test", 15, 400, 0.1)], 
-        cardNumber = "1234567890123456"
-  Очекуван резултат: Се одзема 30, sum = 15 * 400 * 0.9 - 30 = 5370.0
+Случај 8: TTT<br>
+  Услов: price > 300, discount > 0, quantity > 10<br>
+  Влез: allItems = [Item("Test", 15, 400, 0.1)], <br>
+        cardNumber = "1234567890123456"<br>
+  Очекуван резултат: Се одзема 30, sum = 15 * 400 * 0.9 - 30 = 5370.0<br>
 
 <h4>Минималниот број на тест случаи потребни да се покрие критериумот е 8. За услов со 3 атомски услови поврзани со OR операторот како во нашиот случај, можни се 2^3=8 комбинации кои детално ги истестирав.</h4>  
 
